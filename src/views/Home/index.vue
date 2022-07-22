@@ -1,6 +1,3 @@
-<!-- 说明 -->
-<!-- @author 作者 -->
-
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
 import PrivateComponent from './components/PrivateComponent.vue'
