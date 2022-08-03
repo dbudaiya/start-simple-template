@@ -1,7 +1,7 @@
-/* https://prettier.io/docs/en/options.html */
-
+// https://prettier.io/docs/en/options.html 
+// https://dbudaiya.github.io/dushenyan-share-record-blog.github.io/2022/07/31/prettier/
 module.exports = {
-  semi: false, // 尽可能不要分号
-  singleQuote: true, // 尽可能使用单引号
-  trailingComma: 'all', // http://es6.ruanyifeng.com/#docs/style#对象
+  semi: false,
+  singleQuote: true,
+  trailingComma: 'all', 
 }

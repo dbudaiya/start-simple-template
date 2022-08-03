@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div :class="$style.header">
+    <div class="header">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link
@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<style lang="less" module>
+<style lang="less" scoped>
 .header {
   margin: 1.5em;
   text-align: center;

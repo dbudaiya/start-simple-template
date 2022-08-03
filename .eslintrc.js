@@ -1,3 +1,4 @@
+// https://dbudaiya.github.io/dushenyan-share-record-blog.github.io/2022/07/31/eslint/
 module.exports = {
   root: true,
   env: { node: true },
