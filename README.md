@@ -1,10 +1,6 @@
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/154486817-f86b8f20-5463-4122-b6e9-930622e757f2.png' alt='start-simple-template - Opinionated Vite Starter Template' width='600'/>
-</p>
-
 
 <p align='center'>
-快速地<sup><em>start-simple-template</em></sup> 创建 Web 应用
+快速地<sup><em>start-simple-template</em></sup> 创建 Web 单页应用
 <br> 
 </p>
 
