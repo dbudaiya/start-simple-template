@@ -4,9 +4,9 @@ module.exports = {
   env: { node: true },
 
   extends: [
-    'plugin:vue/strongly-recommended', // 使用严谨模式
+    'plugin:vue/strongly-recommended',
     'eslint:recommended',
-    '@vue/prettier', // 结合 .prettierrc.js
+    '@vue/prettier',
   ],
 
   rules: {

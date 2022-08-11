@@ -3,13 +3,13 @@ import Vuex from 'vuex'
 import root from './root'
 Vue.use(Vuex)
 
-/**
- * 全局唯一 Store 实例
- */
+const env = process.env.VUE_APP_ENV
+const devtools = env === 'dev' || env === 'stage'
+const strict = env === 'dev'
+
 export const store = new Vuex.Store({
-  devtools:
-    process.env.VUE_APP_ENV === 'dev' || process.env.VUE_APP_ENV === 'stage',
-  strict: process.env.VUE_APP_ENV === 'dev',
+  devtools,
+  strict,
   ...root,
 
   /* module 应该启用命名空间，即 namespaced: true */

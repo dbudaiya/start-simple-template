@@ -1,8 +1,7 @@
 {
   "name": "start-simple-template",
   "version": "0.10.0",
-  "description": "vue2用于创建单页应用",
-  "private": true,
+  "description": "Vue2 is used to create a single page application.(vue2用于创建单页应用)",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "npm run build:prod",
@@ -61,6 +60,7 @@
     "template",
     "vue2"
   ],
+  "homepage": "https://github.com/dbudaiya/start-simple-template",
   "browserslist": [
     "> 1%",
     "last 2 versions",

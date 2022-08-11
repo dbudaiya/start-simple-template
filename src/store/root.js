@@ -50,7 +50,7 @@ const actions = {
             commit('SET_SITE_INFO', data)
             resolve(data)
           })
-          .catch(err => {
+          .catch(() => {
             resolve({})
           })
       }
@@ -67,18 +67,20 @@ const actions = {
             commit('SET_SOCIALS', data)
             resolve(data)
           })
-          .catch(err => {
+          .catch(() => {
             resolve([])
           })
       }
     })
   },
 }
+
 const getters = {
   loading: state => state.loading,
   runTimeInterval: state => state.runTimeInterval,
   notice: state => (state.websiteInfo ? state.websiteInfo.notice : ''),
 }
+
 export const root = {
   state,
   getters,

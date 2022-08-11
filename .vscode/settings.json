@@ -9,7 +9,8 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
-    "editor.formatOnSave": false // 交给 eslint
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "vscode.typescript-language-features" // 交给 eslint
   },
   "[javascriptreact]": {
     "editor.formatOnSave": false // 交给 eslint

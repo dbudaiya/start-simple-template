@@ -1,9 +1,13 @@
 module.exports = {
   presets: ['@vue/cli-plugin-babel/preset'],
-
+  /**
+   * 项目优化 按需引入
+   */
   plugins: [
-    /* @PC.element-ui */
-    /* element-ui 按需引入，详情：https://github.com/ElementUI/babel-plugin-component */
+    /**
+     * @PC.element-ui
+     * 链接: https://github.com/ElementUI/babel-plugin-component
+     */
     [
       'component',
       {
@@ -13,8 +17,10 @@ module.exports = {
       'element-ui',
     ],
 
-    /* @H5.vant */
-    /* vant 按需引入，详情：https://github.com/ElementUI/babel-plugin-component */
+    /**
+     * @H5.Vant
+     * 链接: https://github.com/ElementUI/babel-plugin-component
+     */
     [
       'component',
       {
@@ -24,7 +30,10 @@ module.exports = {
       'vant',
     ],
 
-    /* lodash 按需引入，详情：https://github.com/lodash/babel-plugin-lodash */
+    /**
+     * Lodash.js
+     * 链接: https://github.com/lodash/babel-plugin-lodash
+     */
     ['lodash'],
   ],
 }

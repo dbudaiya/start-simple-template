@@ -1,5 +1,4 @@
 /dist
-/public/libs
-/src/libs
+/public
 /docs/*.html
 *.json
