@@ -2,3 +2,4 @@
 /public/libs
 /src/libs
 /docs/*.html
+*.json

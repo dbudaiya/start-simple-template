@@ -3,12 +3,6 @@
   "version": "0.10.0",
   "description": "@H5: vconsole; @H5.vant: vant",
   "private": true,
-  "keywords": [
-    "responsive",
-    "lodash",
-    "template",
-    "vue2"
-  ],
   "scripts": {
     "start": "npm run serve",
     "serve": "vue-cli-service serve --open",
@@ -71,6 +65,12 @@
     "svgo-loader": "^2.2.2",
     "vue-template-compiler": "^2.6.12"
   },
+  "keywords": [
+    "responsive",
+    "lodash",
+    "template",
+    "vue2"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
