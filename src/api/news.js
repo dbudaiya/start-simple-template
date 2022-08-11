@@ -1,4 +1,4 @@
-import http from '@/scripts/http'
+import http from '@/http'
 
 /**
  * 获取新闻列表
@@ -15,6 +15,14 @@ export const getNewsList = params => {
     ...params,
   }
   return http.get('/news/getList', { params })
+}
+export const getNews = params => {
+  params = {
+    pageNum: 1,
+    pageSize: 10,
+    ...params,
+  }
+  return http.get('/news/getNews', { params })
 }
 
 /**

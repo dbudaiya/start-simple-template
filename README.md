@@ -107,7 +107,6 @@ yarn i # 如果你没装过 yarn, 可以先运行: npm install -g yarn
 - [ ] 在 `App.vue` 中改变标题
 - [ ] 在 `vue.config.ts` 更改主机名
 - [ ] 在 `public` 目录下改变favicon
-- [ ] 移除 `.github` 文件夹中包含资助的信息
 - [ ] 整理 README 并删除路由
 
 紧接着, 享受吧 :)
