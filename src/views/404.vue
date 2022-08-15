@@ -1,5 +1,7 @@
 <template>
-  <div class="box">抱歉！该页面不存在或无权限访问</div>
+  <div class="box">
+    抱歉！该页面不存在或无权限访问
+  </div>
 </template>
 
 <style lang="less" scoped>

@@ -1,6 +1,6 @@
 {
-  "include": ["./src/**/*", "./tests/**/*"],
-  "exclude": ["node_modules", "dist", "./src/libs"],
+  "include": ["./src/**/*", "mock"],
+  "exclude": ["node_modules", "dist", "./src/utils"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -8,4 +8,3 @@
     }
   }
 }
-

@@ -28,7 +28,10 @@ export default {
       {{ newsDetails }}
     </div>
     <!-- 在 template 中使用'@'别名 -->
-    <img class="logo" src="@/assets/image/logo.png" />
+    <img
+      class="logo"
+      src="@/assets/image/logo.png"
+    >
     <PrivateComponent
       class="private_component"
       msg="PrivateComponent..."

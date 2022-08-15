@@ -1,16 +1,17 @@
 // https://dbudaiya.github.io/dushenyan-share-record-blog.github.io/2022/07/31/eslint/
 module.exports = {
   root: true,
-  env: { node: true },
-
+  env: { 
+    node: true,
+    commonjs: true,
+    es6: true,
+   },
   extends: [
     'plugin:vue/strongly-recommended',
-    'eslint:recommended',
-    '@vue/prettier',
+    'eslint:recommended'
   ],
-
   rules: {
-    'no-console': 'warn',
+    'no-console': process.env.VUE_APP_ENV === 'prod' ? 'error' : 'off',
     'no-debugger': 'warn',
     'no-unused-vars': [
       'warn',
@@ -24,11 +25,9 @@ module.exports = {
     'no-empty': 'warn',
     'vue/order-in-components': 'warn',
   },
-
   parserOptions: {
     parser: 'babel-eslint',
   },
-
   overrides: [
     {
       files: [

@@ -114,7 +114,7 @@ export function getQueryObject(url) {
 export function byteLength(str) {
   // returns the byte length of an utf8 string
   let s = str.length
-  for (var i = str.length - 1; i >= 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) {
     const code = str.charCodeAt(i)
     if (code > 0x7f && code <= 0x7ff) s++
     else if (code > 0x7ff && code <= 0xffff) s += 2
@@ -258,17 +258,17 @@ export function getTimeInterval(startDate, endDate = Date.now()) {
   } else {
     endTime = endDate;
   }
-  let dateInterval = endTime - startTime;
+  const dateInterval = endTime - startTime;
   // //计算出相差天数
-  let days = Math.floor(dateInterval / (24 * 60 * 60 * 1000));
+  const days = Math.floor(dateInterval / (24 * 60 * 60 * 1000));
   //计算小时数
-  let hourLevel = dateInterval % (24 * 60 * 60 * 1000);
-  let hours = Math.floor(hourLevel / (60 * 60 * 1000))
+  const hourLevel = dateInterval % (24 * 60 * 60 * 1000);
+  const hours = Math.floor(hourLevel / (60 * 60 * 1000))
   //计算分钟数
-  let minutesLevel = hourLevel % (60 * 60 * 1000);
-  let minutes = Math.floor(minutesLevel / (60 * 1000));
+  const minutesLevel = hourLevel % (60 * 60 * 1000);
+  const minutes = Math.floor(minutesLevel / (60 * 1000));
   //计算秒数
-  let seconds = Math.round((minutesLevel % (60 * 1000)) / 1000);
+  const seconds = Math.round((minutesLevel % (60 * 1000)) / 1000);
   return `${days} 天 ${hours} 时 ${minutes} 分 ${seconds} 秒`;
 }
 

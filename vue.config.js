@@ -11,12 +11,25 @@ if (isDev) {
   if (isEmpty(env.VUE_APP_BASEURL_API)) env.VUE_APP_BASEURL_API = '/@API'
 }
 
+if (env.NODE_ENV) {
+  if (
+    /^(development|production|test)$/.test(env.NODE_ENV) === false ||
+    /^(dev|stage|prod)$/.test(env.VUE_APP_ENV) === false ||
+    (env.NODE_ENV === 'development' && env.VUE_APP_ENV !== 'dev') ||
+    (env.NODE_ENV === 'production' && env.VUE_APP_ENV === 'dev') ||
+    (env.NODE_ENV === 'production' && env.VUE_APP_MOCK === undefined) ||
+    (env.NODE_ENV === 'production' && env.VUE_APP_ENABLE_DOCS === undefined)
+  ) {
+    throw new Error('环境变量配置错误或不兼容或缺失')
+  }
+}
+
 /**
  * @type {import('@vue/cli-service').ConfigFunction}
  */
 module.exports = () => ({
   devServer: {
-    /* 更详细的配置规则：https://webpack.docschina.org/configuration/dev-server/#devserver-proxy */
+    /* 配置规则：https://webpack.docschina.org/configuration/dev-server/#devserver-proxy */
     proxy: {
       [env.VUE_APP_BASEURL_API]: {
         pathRewrite: { '^/(api|@API)': '' },
@@ -25,11 +38,8 @@ module.exports = () => ({
     },
     host: 'localhost', // 需要内网的其它机器也能访问时，将值改成 '0.0.0.0'
   },
-
   assetsDir: 'static-hash',
-
   publicPath: env.BASE_URL,
-
   css: {
     extract: false,
     requireModuleExtension: true,
@@ -48,7 +58,7 @@ module.exports = () => ({
         },
       },
       postcss: {
-        plugins: function({ resourcePath: path }) {
+        plugins: function ({ resourcePath: path }) {
           const pxtorem = postcssPxtorem({ propList: ['*'] }) // @H5 将 px 转成 rem
           if (
             /* 跳过 autoprefixer */
@@ -64,9 +74,7 @@ module.exports = () => ({
     },
     sourceMap: isDev ? env.DEV_CSS_SOURCEMAP === 'true' : false,
   },
-
   productionSourceMap: env.VUE_APP_ENV === 'stage',
-
   configureWebpack: config => {
     if (isDev) config.devtool = 'source-map'
     config.optimization.splitChunks.cacheGroups.vendors.test = module => {
@@ -83,7 +91,6 @@ module.exports = () => ({
       return /[\\/]node_modules[\\/]|[\\/]src[\\/]libs[\\/]/.test(path) // 将这些初始化时的依赖包纳入 chunk-vendors*.js（其它的则纳入 app*.js）
     }
   },
-
   chainWebpack: config => {
     /* 跳过 babel-loader */
     config.module.rule('js').exclude.add(path => {
@@ -131,8 +138,8 @@ module.exports = () => ({
 
     if (config.plugins.has('copy')) {
       config.plugin('copy').tap(args => {
-        args[0][0].ignore.push('.eslintrc.js', '.prettierrc.js')
-        args[0][0].transform = function(content, path) {
+        args[0][0].ignore.push('.eslintrc.js')
+        args[0][0].transform = function (content, path) {
           if (
             /* 让 public 中的其它文件也支持 EJS 语法（传入运行时可用的环境变量） */
             /\.(html|htm|js|json)$/.test(path) &&
@@ -155,15 +162,3 @@ module.exports = () => ({
   },
 })
 
-if (env.NODE_ENV) {
-  if (
-    /^(development|production|test)$/.test(env.NODE_ENV) === false ||
-    /^(dev|stage|prod)$/.test(env.VUE_APP_ENV) === false ||
-    (env.NODE_ENV === 'development' && env.VUE_APP_ENV !== 'dev') ||
-    (env.NODE_ENV === 'production' && env.VUE_APP_ENV === 'dev') ||
-    (env.NODE_ENV === 'production' && env.VUE_APP_MOCK === undefined) ||
-    (env.NODE_ENV === 'production' && env.VUE_APP_ENABLE_DOCS === undefined)
-  ) {
-    throw new Error('环境变量配置错误或不兼容或缺失')
-  }
-}

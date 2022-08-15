@@ -17,7 +17,7 @@
 
 ## 特性
 
-- ⚡️ [Vue 2](https://cn.vuejs.org/index.html), [vueCli@next](https://cli.vuejs.org/zh/), [yarn](https://yarn.bootcss.com/)  - 就是稳！
+- ⚡️ [Vue 2](https://cn.vuejs.org/index.html), [vueCli@next](https://cli.vuejs.org/zh/), [yarn](https://yarn.bootcss.com/)  - 很传统!!！
 
 - 🗂 [固定资源存放](./src/assets)
 

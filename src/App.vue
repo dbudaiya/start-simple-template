@@ -1,13 +1,18 @@
 <template>
   <div>
     <div class="header">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
+      <router-link to="/">
+        Home
+      </router-link>
+      <router-link to="/about">
+        About
+      </router-link>
       <router-link
         v-if="$env.VUE_APP_ENABLE_DOCS === 'true'"
         to="/component-examples#SvgIcon"
         target="_blank"
-        >开发文档
+      >
+        开发文档
       </router-link>
     </div>
     <router-view />

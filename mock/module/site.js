@@ -1,5 +1,3 @@
-const Mock = require('mockjs');
-
 export default [
     // 站点信息
     {

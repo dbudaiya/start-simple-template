@@ -1,7 +1,5 @@
 import request from '@/http'
 
-//
-
 export function fetchSocial() {
   return request({
     url: '/social',

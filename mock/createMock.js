@@ -50,7 +50,7 @@ export const createMock = (baseURL, isGroupOpened = false) =>
           }
         })()
         const _k = isGroupOpened ? 'group' : 'groupCollapsed'
-        // console[_k](`mock:${method}:${urlParsed.pathname}`)
+        console[_k](`mock:${method}:${urlParsed.pathname}`)
         !_.isEmpty(queryCopy) && console.log('query', queryCopy)
         !_.isEmpty(bodyCopy) && console.log('body ', bodyCopy)
         console.log('res  ', resCopy)

@@ -29,7 +29,7 @@ const files = require.context('.', true, /\.js$/);
 files.keys().forEach((key) => {
     if (key === './index.js') return;
     files(key).default.forEach(item => {
-        let {url,type,response} = item;
+        const {url,type,response} = item;
         // 注册所有的mock服务
         Mock.mock(new RegExp('^' + url), type, XHR2ExpressReqWrap(response));
     })

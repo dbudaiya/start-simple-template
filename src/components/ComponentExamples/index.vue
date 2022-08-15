@@ -5,6 +5,13 @@
 <script>
 export default {
   name: 'ComponentExamples',
+  data() {
+    return {
+      message: 'Hello Vue!',
+    }
+  },
+  methods: {
+  },
 }
 </script>
 
