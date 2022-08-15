@@ -8,6 +8,7 @@ import App from './App.vue'
 import './scripts/injects'
 import './catchError'
 import './process'
+import './common-loader'
 
 import './styles/index.less'
 

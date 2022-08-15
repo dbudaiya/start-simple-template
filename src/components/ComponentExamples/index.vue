@@ -4,15 +4,18 @@
 
 <script>
 export default {
-  name: 'ComponentExamples',
-  data() {
-    return {
-      message: 'Hello Vue!',
-    }
+  name: "ComponentExamples",
+  props: {
+    msg: {
+      type: String,
+      default: null,
+    },
   },
-  methods: {
-  },
-}
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="less" scoped>
+div {
+  background-color: greenyellow;
+}
+</style>
