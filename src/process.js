@@ -4,6 +4,7 @@ import Vue from 'vue'
 if (process.env.VUE_APP_MOCK === 'true') {
   require('../mock')
 }
+
 if (process.env.VUE_APP_ENV === 'dev' || process.env.VUE_APP_ENV === 'stage') {
   require('./vconsole') // @H5
 }
