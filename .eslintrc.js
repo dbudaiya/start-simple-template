@@ -12,7 +12,7 @@ module.exports = {
   ],
   rules: {
     'no-console': process.env.VUE_APP_ENV === 'prod' ? 'error' : 'off',
-    'no-debugger': 'warn',
+    'no-debugger': process.env.VUE_APP_ENV === 'prod' ? 'error' : 'off',
     'no-unused-vars': [
       'warn',
       {

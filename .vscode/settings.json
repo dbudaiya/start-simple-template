@@ -6,7 +6,5 @@
   //https://github.com/lokalise/i18n-ally/wiki/Locale-Formats
   "i18n-ally.sortKeys": false,
   // https://github.com/lokalise/i18n-ally/wiki/Machine-Translation
-  "i18n-ally.translate.engines": ["google-cn", "google"],
-  
-
+  "i18n-ally.translate.engines": ["google-cn", "google"]
 }

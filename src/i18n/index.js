@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import Cookies from 'js-cookie'
 
-import enLocale from './locales/en.json'
-import zhLocale from './locales/zh-cn.json'
+import enLocale from './langs/en.json'
+import zhLocale from './langs/zh-cn.json'
 
 Vue.use(VueI18n)
 
