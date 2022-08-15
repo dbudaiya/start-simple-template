@@ -1,33 +1,12 @@
 {
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  "i18n-ally.localesPaths": "src/i18n/langs",
+  "i18n-ally.regex.key": ".*?",
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.enabledFrameworks":["vue"],
+  //https://github.com/lokalise/i18n-ally/wiki/Locale-Formats
+  "i18n-ally.sortKeys": false,
+  // https://github.com/lokalise/i18n-ally/wiki/Machine-Translation
+  "i18n-ally.translate.engines": ["google-cn", "google"],
+  
 
-  "files.associations": {
-    ".env": "ignore",
-    ".env.*": "ignore"
-  },
-
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": "vscode.typescript-language-features" // 交给 eslint
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": false // 交给 eslint
-  },
-  "[vue]": {
-    "editor.formatOnSave": false, // 交给 eslint
-    "editor.defaultFormatter": "octref.vetur"
-  },
-
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
-  },
-
-  "path-autocomplete.pathMappings": {
-    "@": "${folder}/src",
-    "~@": "${folder}/src"
-  },
-  "path-autocomplete.extensionOnImport": true
 }
