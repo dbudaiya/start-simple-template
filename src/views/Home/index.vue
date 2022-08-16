@@ -36,7 +36,8 @@ export default {
       class="private_component"
       msg="PrivateComponent..."
     />
-    <ComponentExamples msg="ComponentExamples"
+    <ComponentExamples 
+      msg="ComponentExamples"
     />
   </div>
 </template>

@@ -2,11 +2,6 @@ import _ from 'lodash'
 import axios from 'axios'
 import stringify from 'qs/lib/stringify'
 import dateFns_format from 'date-fns/format'
-import download from './download'
-
-export {
-  download, // 附件下载
-}
 
 /**
  * 将列表转成对象

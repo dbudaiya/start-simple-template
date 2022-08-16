@@ -1,8 +1,12 @@
 <template>
-  <div>ComponentExamples</div>
+  <div>
+    <div>ComponentExamples</div>
+    <div>{{ users }}</div>
+  </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "ComponentExamples",
   props: {
@@ -10,6 +14,9 @@ export default {
       type: String,
       default: null,
     },
+  },
+  computed: {
+    ...mapGetters(["users"]),
   },
 };
 </script>

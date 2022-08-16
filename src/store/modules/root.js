@@ -1,4 +1,4 @@
-import { getTimeInterval } from '../utils/handleTime'
+import { getTimeInterval } from '../../utils/handleTime'
 import { fetchSocial, fetchSiteInfo } from '@/api/home'
 
 /**
@@ -8,6 +8,7 @@ import { fetchSocial, fetchSiteInfo } from '@/api/home'
 const runAt = '1589878800000'
 let timer = null
 const state = {
+  users: 'dushenyan',
   loading: false,
   runTimeInterval: '',
   socials: '',
@@ -81,11 +82,9 @@ const getters = {
   notice: state => (state.websiteInfo ? state.websiteInfo.notice : ''),
 }
 
-export const root = {
+export default {
   state,
   getters,
   mutations,
   actions,
 }
-
-export default root
