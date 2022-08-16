@@ -1,5 +1,16 @@
 axios 中文文档：<a href="http://www.axios-js.com/zh-cn/docs/" target="_blank">http://www.axios-js.com/zh-cn/docs/</a>
 
+### 请求拦截顺序
+
+```ts
+/**
+ * 这里的配置项及拦截器通常和业务相关
+ * 请求拦截器的执行顺序：最后注册--->最先注册
+ * 响应拦截器的执行顺序：最先注册--->最后注册--->then
+ * 根据顺序做好数据及状态的传递
+ */
+
+```
 ### 请求入参用法
 
 #### Query String Parameters

@@ -1,17 +1,17 @@
 import request from '@/http'
 
-export function fetchSocial() {
+export function fetchSocial(params) {
   return request({
     url: '/social',
     method: 'get',
-    params: {},
+    params
   })
 }
 
-export function fetchSiteInfo() {
+export function fetchSiteInfo(params) {
   return request({
     url: '/site',
     method: 'get',
-    params: {},
+    params
   })
 }

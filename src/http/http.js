@@ -1,18 +1,8 @@
-/**
- * 这里的配置项及拦截器通常和业务相关
- * 请求拦截器的执行顺序：最后注册--->最先注册
- * 响应拦截器的执行顺序：最先注册--->最后注册--->then
- * 根据顺序做好数据及状态的传递
- */
-
 import _ from 'lodash'
 import createAxios from './createAxios'
 import config from './config'
 
-/**
- * 发送前拦截
- * @param {Parameters<createAxios>[0]} config
- */
+// 请求拦截
 const requestHandle = config => {
   // do something before request is sent
 
@@ -22,22 +12,19 @@ const requestHandle = config => {
   return config
 }
 
-/* 发送失败拦截 */
+// 请求失败拦截
 const requestErrHandle = err => {
   // do something with request error
   // console.log(err) // for debug
   return Promise.reject(err)
 }
 
-/**
- * 响应成功拦截
- * @param {import('axios').AxiosResponse} res
- */
+// 响应成功拦截
 const responseHandle = res => {
   const { code, msg } = res.data || {}
   // 200 类成功
   if (
-    code === '0000' || // TODO: 结合具体项目
+    code === '2000' || // TODO: 结合具体项目
     /^(arraybuffer|blob|stream)$/.test(_.get(res.request, 'responseType'))
   ) {
     return res

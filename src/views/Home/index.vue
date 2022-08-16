@@ -1,6 +1,6 @@
 <script>
 import PrivateComponent from './components/PrivateComponent.vue'
-import { getNewsList, getNewsDetails, getNews } from '@/api/news'
+import { getNewsList, getNewsDetails } from '@/api/news'
 
 export default {
   name: 'Home',
@@ -14,7 +14,6 @@ export default {
   created() {
     getNewsList({ keyword: 'xxx' }).then((res) => (this.newsList = res.exData))
     getNewsDetails('xxx').then((res) => (this.newsDetails = res.exData))
-    getNews({ loading: 'xxx' }).then((res) => (this.newsDetails = res.exData))
   },
 }
 </script>

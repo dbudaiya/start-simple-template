@@ -2,7 +2,6 @@
 const Mock = require('mockjs');
 import { param2Obj } from '../utils'
 
-// 设置拦截ajax请求的相应时间
 Mock.setup({
     timeout: '200-600'
 });
@@ -25,7 +24,7 @@ function XHR2ExpressReqWrap(respond) {
 }
 
 
-// 使用webpack的require.context()遍历所有mock文件
+// 使用webpack的require.context()实例所有mock文件
 const files = require.context('.', true, /\.js$/);
 files.keys().forEach((key) => {
     if (key === './index.js') return;

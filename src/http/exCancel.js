@@ -7,7 +7,7 @@ const tokens = {}
  * 请求前处理 config（尽可能在最先注册的拦截器中调用）
  * @param {import('axios').AxiosRequestConfig} config
  */
-export const setConfig = function(config) {
+export const setConfig = function (config) {
   const { method, baseURL = '', url, exCancelName, cancelToken } = config
   const path = url.replace(/\?.*$/, '')
 
@@ -73,7 +73,7 @@ export const hooks = Object.freeze({
  * 取消未完成的请求
  * @param {string | string[]} name exCancelName 参数值对应的名称
  */
-export const cancel = function(name) {
+export const cancel = function (name) {
   const names = Array.isArray(name) ? name : [name]
   _.each(tokens, (val, key) => {
     if (names.includes(key)) {

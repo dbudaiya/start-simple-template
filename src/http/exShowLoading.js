@@ -1,12 +1,9 @@
 import { Loading } from 'element-ui' // @PC.element-ui
 import { Toast } from 'vant' // @H5.vant
 
-let instance = null // 单例模式
+let instance = null 
 let count = 0
 
-/**
- * @type {import('axios').AxiosInstance['exHooks'][0]}
- */
 export const exShowLoading = Object.freeze({
   onBefore(config) {
     if (config.exShowLoading) {
