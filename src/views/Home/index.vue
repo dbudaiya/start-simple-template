@@ -1,23 +1,23 @@
 <script>
-import PrivateComponent from './components/PrivateComponent.vue'
-import { getNewsList, getNewsDetails } from '@/api/news'
+import PrivateComponent from "./components/PrivateComponent.vue";
+import { getNewsList, getNewsDetails } from "@/api/news";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: { PrivateComponent },
   data() {
     return {
       newsList: null,
       newsDetails: null,
-    }
+    };
   },
   created() {
-    getNewsList({ keyword: 'xxx' }).then((res) => (this.newsList = res.exData))
-    getNewsDetails('xxx').then((res) => (this.newsDetails = res.exData))
+    getNewsList({ keyword: "xxx" }).then((res) => (this.newsList = res.exData));
+    getNewsDetails("xxx").then((res) => (this.newsDetails = res.exData));
     console.log(this.$const);
     console.log(this.$utils);
   },
-}
+};
 </script>
 
 <template>
@@ -37,9 +37,11 @@ export default {
       class="private_component"
       msg="PrivateComponent..."
     />
-    <ComponentExamples 
-      msg="ComponentExamples"
-    />
+    <ComponentExamples msg="ComponentExamples" />
+    <input
+      type="text"
+      v-focus
+    >
   </div>
 </template>
 
