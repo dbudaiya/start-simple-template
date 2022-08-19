@@ -1,6 +1,6 @@
 {
   "include": ["./src/**/*", "mock"],
-  "exclude": ["node_modules", "dist", "./src/utils"],
+  "exclude": ["node_modules", "dist", "src/scripts/utils"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

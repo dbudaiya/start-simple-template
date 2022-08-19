@@ -1,4 +1,4 @@
-import { getTimeInterval } from '../../utils/handleTime'
+import { getTimeInterval } from '../../scripts/utils/handleTime'
 import { fetchSocial, fetchSiteInfo } from '@/api/home'
 
 /**

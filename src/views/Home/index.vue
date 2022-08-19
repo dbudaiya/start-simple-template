@@ -14,6 +14,8 @@ export default {
   created() {
     getNewsList({ keyword: 'xxx' }).then((res) => (this.newsList = res.exData))
     getNewsDetails('xxx').then((res) => (this.newsDetails = res.exData))
+    console.log(this.$const);
+    console.log(this.$utils);
   },
 }
 </script>

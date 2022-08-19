@@ -4,7 +4,7 @@
  */
 
 import Vue from 'vue'
-import * as utils from '@/utils'
+import * as utils from '@/scripts/utils'
 import * as constants from '@/scripts/constants'
 import eventBus from '@/scripts/eventBus'
 
@@ -19,10 +19,8 @@ Vue.prototype.$eventBus = eventBus
 Vue.filter('dateFormat', utils.dateFormat)
 
 /* 全局指令 Vue.directive */
+// Vue.directive('focus', utils.focus)
 
 /* 全局混入 Vue.mixin */
-
-/* 全局组件 Vue.component */
-// Vue.component('svg-icon', SvgIcon)
 
 /* 小插件 Vue.use (重量级插件放主目录，如：vue-router、vuex、element-ui、i18n ...) */
