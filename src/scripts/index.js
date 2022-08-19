@@ -8,6 +8,7 @@ import * as utils from '@/scripts/utils'
 import * as constants from '@/scripts/constants'
 import eventBus from '@/scripts/eventBus'
 import directive from './directive'
+import * as filter from './filters'
 
 /* 原型属性/方法 Vue.prototype (使用 $ 前缀) */
 Vue.prototype.$env = Object.freeze(process.env)
@@ -17,7 +18,9 @@ Vue.prototype.$isCancel = utils.isCancel
 Vue.prototype.$eventBus = eventBus
 
 /* 全局过滤器 Vue.filter */
-Vue.filter('dateFormat', utils.dateFormat)
+Object.keys(filter).forEach(key => {
+  Vue.filter(key, filter[key])
+})
 
 /* 全局指令 Vue.directive */
 // Vue.directive('focus', utils.focus)

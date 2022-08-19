@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>ComponentExamples</div>
-    <div>{{ users }}</div>
+    <div>过滤器: {{ users | capitalize }}</div>
   </div>
 </template>
 
